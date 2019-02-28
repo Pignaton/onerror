@@ -8,11 +8,25 @@
 	<script type="text/javascript" src="js/onerror.js"></script>
 	<title> Error - Javascript </title>
 	<script type="text/javascript">
-		var teste = null;
-		alert(teste.teste2);// erro
+
+	window.onerror = function(msg, src, lineNo, colNo, error){
+		document.getElementById("msg").innerHTML = "Mensagem de Erro\n\n"
+	   +"Mensagem: "+msg+"\n"
+	   +"URL: "+src+"\n"
+	   +"linha: "+lineNo+"\n"
+	   +"Coluna: "+colNo+"\n";
+	   /*+"Erro: "+error.stack+"\n";*/
+	}
+	
+	/*var teste = null;
+	alert(teste.teste2);  erro*/
 	</script>
 </head>
 <body>
-
+<pre id="msg"></pre>
+<script>
+	var teste = null;
+	alert(teste.teste2);// erro
+</script>
 </body>
 </html>
