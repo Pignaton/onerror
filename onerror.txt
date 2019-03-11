@@ -1,0 +1,2 @@
+2019-03-11 17:00:17 - Mensagem : (Uncaught TypeError: Cannot read property 'teste2' of null) -  URL : (http://localhost/kaleb/onerror-master/onerror-master/) - Linha : (28) -  Objeto Error : (TypeError: Cannot read property 'teste2' of null) 
+2019-03-11 17:05:14 - Mensagem : (Uncaught TypeError: Cannot read property 'teste2' of null) -  URL : (http://localhost/kaleb/onerror-master/onerror-master/) - Linha : (25) -  Objeto Error : (TypeError: Cannot read property 'teste2' of null) 
