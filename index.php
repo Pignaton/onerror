@@ -8,25 +8,26 @@
 	<script type="text/javascript" src="js/onerror.js"></script>
 	<title> Error - Javascript </title>
 	<script type="text/javascript">
-
-	window.onerror = function(msg, src, lineNo, colNo, error){
-		document.getElementById("msg").innerHTML = "Mensagem de Erro\n\n"
+	/*window.onerror = function(msg, src, lineNo, colNo, err){
+		document.getElementById("msga").innerHTML = "Mensagem de Erro\n\n"
 	   +"Mensagem: "+msg+"\n"
 	   +"URL: "+src+"\n"
 	   +"linha: "+lineNo+"\n"
 	   +"Coluna: "+colNo+"\n";
-	   /*+"Erro: "+error.stack+"\n";*/
-	}
+	   /*+"Erro: "+error.stack+"\n";
+	}*/
 	
 	/*var teste = null;
 	alert(teste.teste2);  erro*/
+	$(document).ready(function () {
+	$( "#delete" ).click(function( event ) {
+		var teste = null;
+			alert(teste.teste2);// erro
+		});
+		});
 	</script>
 </head>
 <body>
-<pre id="msg"></pre>
-<script>
-	var teste = null;
-	alert(teste.teste2);// erro
-</script>
+<input type="submit" value="teste" id="delete"/>
 </body>
 </html>

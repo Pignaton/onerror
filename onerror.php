@@ -4,17 +4,16 @@ $src = $_POST['txtsrc'];
 $line = $_POST['txtlineNo'];
 $error = $_POST['txterror'];
 
+date_default_timezone_set( 'America/Sao_Paulo' );
+$date = date('Y-m-d H:i:s');
+
 $arquivo = 'onerror.txt';
 
-if(is_writable($arquivo)){
+$criar = fopen($arquivo, "a+");
+if($msg != "" && $src != "" && $line != "" && $error != "")	
+	$escreve = fwrite($criar, "$date - Mensagem : ($msg) -  URL : ($src) - Linha : ($line) -  Objeto Error : ($error) \r\n"); 
 
-	$criar = fopen($arquivo, "a+");
-	if($msg != "" && $src != "" && $line != "" && $error != ""){ 
-	
-	$escreve = fwrite($criar, "Mensagem : ($msg) / URL : ($src) / Linha : ($line) / Objeto Error : ($error) \r\n"); 
+fclose($criar); 
+echo "deu certo"; 
 
-	fclose($criar); 
-	echo "deu certo"; 
-	}
-}
 ?>
